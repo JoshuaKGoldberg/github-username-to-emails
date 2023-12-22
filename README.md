@@ -23,10 +23,55 @@ npm i github-username-to-emails
 ```
 
 ```ts
-import { greet } from "github-username-to-emails";
+import { getGitHubUsernameEmails } from "github-username-to-emails";
 
-greet("Hello, world! 💖");
+await getGitHubUsernameEmails({ username: "joshuakgoldberg" });
+
+/*
+{
+  account: 'github@joshuakgoldberg.com',
+  events: { 'git@joshuakgoldberg.com': [ 'Josh Goldberg ✨', 'Josh Goldberg' ] }
+}
+*/
 ```
+
+Calling `getGitHubUsernameEmails` will try to find the user's email from two public data points:
+
+- [`/users/${username}`](https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28#get-a-user): public account information
+- [`/users/{username}/events`](https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-public-events-for-a-user):
+
+Note that `account` might be `undefined` and `events` might be `{}`.
+Only publicly visible emails can be retrieved.
+
+### Options
+
+`auth` must be provided as an option or via `process.env.GH_TOKEN`.
+
+| Option         | Type     | Description                        | Default                |
+| -------------- | -------- | ---------------------------------- | ---------------------- |
+| `auth`         | `string` | Auth token for Octokit REST calls. | `process.env.GH_TOKEN` |
+| `historyLimit` | `number` | How many public events to look at. | `500`                  |
+| `username`     | `string` | GitHub user to check emails of.    |                        |
+
+```ts
+await getGitHubUsernameEmails({
+	auth: "gho_abc123",
+	historyLimit: 9001,
+	username: "joshuakgoldberg",
+});
+```
+
+## Email Privacy
+
+This package doesn't expose any data users aren't already providing to GitHub.
+You can manually check the same data it looks at on:
+
+1. A user's public GitHub profile
+2. `https://api.github.com/users/<username>/events`
+
+This package only serves as a convenience to same time searching through that data.
+
+To hide your email from public view, see [GitHub's _Setting your commit email address_ docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address).
 
 ## Contributors
 
