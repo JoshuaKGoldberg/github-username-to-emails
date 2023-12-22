@@ -37,8 +37,10 @@ await getGitHubUsernameEmails({ username: "joshuakgoldberg" });
 
 Calling `getGitHubUsernameEmails` will try to find the user's email from two public data points:
 
-- [`/users/${username}`](https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28#get-a-user): public account information
-- [`/users/{username}/events`](https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-public-events-for-a-user):
+- `account`: [`/users/${username}`](https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28#get-a-user): public account information
+- `events`: [`/users/{username}/events`](https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-public-events-for-a-user): commits pushed by the user
+  - This is stored as an object containing, under each email, the commit names associated with that email
+  - Note that these may be commits originally authored by other users, _not_ the user you're looking for
 
 Note that `account` might be `undefined` and `events` might be `{}`.
 Only publicly visible emails can be retrieved.
