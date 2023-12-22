@@ -18,7 +18,7 @@ export async function getEventsEmails(
 	let totalResults = 0;
 	let page = 0;
 
-	// TODO: Instead of paginating in series, look into using a parallel queue?
+	// TODO: Instead of paginating in series, look into something faster?
 	while (totalResults < historyLimit) {
 		const { data: events } = await octokit.request(
 			"GET /users/{username}/events/public",
