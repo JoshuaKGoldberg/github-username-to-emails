@@ -78,7 +78,7 @@ devDependencies:
     version: 2.4.0
   knip:
     specifier: ^5.0.0
-    version: 5.7.1(@types/node@20.12.4)(typescript@5.4.3)
+    version: 5.7.2(@types/node@20.12.4)(typescript@5.4.3)
   lint-staged:
     specifier: ^15.2.0
     version: 15.2.2
@@ -4905,8 +4905,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /knip@5.7.1(@types/node@20.12.4)(typescript@5.4.3):
-    resolution: {integrity: sha512-qO17flswODdIfu9q5UA20nsAhai90TtRBz9q0a4y4NtsWN2BRRzKYPOPn6K3lUpKQVyjOoA9S3a/xHYIEXKKYg==}
+  /knip@5.7.2(@types/node@20.12.4)(typescript@5.4.3):
+    resolution: {integrity: sha512-KbotQSt1B+yArhtCW6gLEaFFaDQCcWDme0VlJMKra2+zaP3wsZ8A5CWyfTYP7W/wqBOLPmlYKJo4fCcnwDlQDw==}
     engines: {node: '>=18.6.0'}
     hasBin: true
     peerDependencies:
@@ -5665,7 +5665,7 @@ packages:
       semver: 7.6.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      type-fest: 4.14.0
+      type-fest: 4.15.0
       validate-npm-package-name: 5.0.0
     transitivePeerDependencies:
       - supports-color
@@ -6319,7 +6319,7 @@ packages:
     dependencies:
       find-up: 6.3.0
       read-pkg: 8.1.0
-      type-fest: 4.14.0
+      type-fest: 4.15.0
     dev: true
 
   /read-pkg-up@7.0.1:
@@ -6348,7 +6348,7 @@ packages:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.0
       parse-json: 7.1.1
-      type-fest: 4.14.0
+      type-fest: 4.15.0
     dev: true
 
   /readable-stream@3.6.2:
@@ -7325,8 +7325,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /type-fest@4.14.0:
-    resolution: {integrity: sha512-on5/Cw89wwqGZQu+yWO0gGMGu8VNxsaW9SB2HE8yJjllEk7IDTwnSN1dUVldYILhYPN5HzD7WAaw2cc/jBfn0Q==}
+  /type-fest@4.15.0:
+    resolution: {integrity: sha512-tB9lu0pQpX5KJq54g+oHOLumOx+pMep4RaM6liXh2PKmVRFF+/vAtUP0ZaJ0kOySfVNjF6doBWPHhBhISKdlIA==}
     engines: {node: '>=16'}
     dev: true
 
