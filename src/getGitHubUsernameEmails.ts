@@ -1,3 +1,4 @@
+import { getGitHubAuthToken } from "get-github-auth-token";
 import { Octokit } from "octokit";
 
 import { getAccountEmail } from "./getAccountEmail.js";
@@ -14,14 +15,29 @@ export interface GitHubUsernameEmails {
 	events: EmailsToNames;
 }
 
+async function retrieveAuth(provided: string | undefined) {
+	if (provided === "") {
+		throw new Error("Invalid auth provided: an empty string ('').");
+	}
+
+	const auth = await getGitHubAuthToken();
+	if (auth.succeeded) {
+		return auth.token;
+	}
+
+	throw new Error(
+		"Please provide an auth token (process.env.GH_TOKEN) or log in with the GitHub CLI (gh).",
+		{
+			cause: auth.error,
+		},
+	);
+}
+
 export async function getGitHubUsernameEmails({
-	auth,
+	auth: providedAuth,
 	...rawOptions
 }: GitHubUsernameEmailsOptions): Promise<GitHubUsernameEmails> {
-	auth ??= process.env.GH_TOKEN;
-	if (!auth) {
-		throw new Error(`Please provide an auth token (process.env.GH_TOKEN).`);
-	}
+	const auth = await retrieveAuth(providedAuth);
 
 	const octokit = new Octokit({ auth });
 	const options = { ...defaultOptions, ...rawOptions };

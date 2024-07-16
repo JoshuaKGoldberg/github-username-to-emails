@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      get-github-auth-token:
+        specifier: ^0.1.0
+        version: 0.1.0
       octokit:
         specifier: ^4.0.0
         version: 4.0.2
@@ -2175,6 +2178,10 @@ packages:
 
   get-func-name@2.0.2:
     resolution: {integrity: sha512-8vXOvuE167CtIc3OyItco7N/dpRtBbYOsPsXCz7X/PMnlGjYjSGuZJgM1Y7mmew7BKf9BqvLX2tnOVy1BBUsxQ==}
+
+  get-github-auth-token@0.1.0:
+    resolution: {integrity: sha512-ENm+A39AV0X4+Ls1jiCvmqx+C8hSYTv4d5hV9Ks+EL+gx9a0P9pYYpRE1k2ExwRT3EFQabGXF1Rkdp5FIsLkiw==}
+    engines: {node: '>=18'}
 
   get-intrinsic@1.2.4:
     resolution: {integrity: sha512-5uYhsJH8VJBTv7oslg4BznJYhDoRI6waYCxMmCdnTrcCrHA/fCFKoTFz2JKKE0HdDFUF7/oQuhzumXJK7paBRQ==}
@@ -6492,6 +6499,8 @@ snapshots:
   get-east-asian-width@1.2.0: {}
 
   get-func-name@2.0.2: {}
+
+  get-github-auth-token@0.1.0: {}
 
   get-intrinsic@1.2.4:
     dependencies:
