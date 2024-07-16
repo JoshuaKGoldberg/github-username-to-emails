@@ -47,13 +47,14 @@ Only publicly visible emails can be retrieved.
 
 ### Options
 
-`auth` must be provided as an option or via `process.env.GH_TOKEN`.
+`auth` is retrieved with [`get-github-auth-token`](https://github.com/JoshuaKGoldberg/get-github-auth-token), which defaults to `process.env.GH_TOKEN`, or failing that, [`gh auth token`](https://cli.github.com/manual/gh_auth_token).
+If neither is available then an auth token must be provided as an option.
 
-| Option         | Type     | Description                        | Default                |
-| -------------- | -------- | ---------------------------------- | ---------------------- |
-| `auth`         | `string` | Auth token for Octokit REST calls. | `process.env.GH_TOKEN` |
-| `historyLimit` | `number` | How many public events to look at. | `500`                  |
-| `username`     | `string` | GitHub user to check emails of.    |                        |
+| Option         | Type     | Description                        | Default                                      |
+| -------------- | -------- | ---------------------------------- | -------------------------------------------- |
+| `auth`         | `string` | Auth token for Octokit REST calls. | `process.env.GH_TOKEN` or `$(gh auth token)` |
+| `historyLimit` | `number` | How many public events to look at. | `500`                                        |
+| `username`     | `string` | GitHub user to check emails of.    |                                              |
 
 ```ts
 await getGitHubUsernameEmails({
