@@ -42,15 +42,15 @@ describe("githubUsernameToEmailsCli", () => {
 		await githubUsernameToEmailsCli(["abc"]);
 
 		expect(mockLog.mock.calls).toMatchInlineSnapshot(`
-          [
-            [
-              "Account email: None found...",
-            ],
-            [
-              "Event Email(s): 0",
-            ],
-          ]
-        `);
+			[
+			  [
+			    "Account email: None found...",
+			  ],
+			  [
+			    "Event Email(s): None found...",
+			  ],
+			]
+		`);
 	});
 
 	it("logs results when results are found", async () => {
