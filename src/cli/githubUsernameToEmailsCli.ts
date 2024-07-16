@@ -14,7 +14,7 @@ export async function githubUsernameToEmailsCli(args: string[]) {
 
 	const events = Object.entries(result.events);
 
-	console.log(`Event Email(s): ${events.length ?? "None found..."}`);
+	console.log(`Event Email(s): ${events.length || "None found..."}`);
 
 	for (const [email, names] of events) {
 		console.log(` - ${email}, with names: ${names.join(", ")}`);

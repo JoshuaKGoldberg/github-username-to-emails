@@ -1,8 +1,6 @@
-import { Octokit } from "octokit";
-import { MockInstance, beforeEach, describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { githubUsernameToEmailsCli } from "./githubUsernameToEmailsCli.js";
-import { getGitHubUsernameEmails } from "../getGitHubUsernameEmails.js";
 
 const mockGetGitHubUsernameEmails = vi.fn();
 
@@ -20,17 +18,17 @@ describe("githubUsernameToEmailsCli", () => {
 	});
 
 	it("throws an error when zero args are provided", async () => {
-		expect(
-			async () => await githubUsernameToEmailsCli([]),
-		).rejects.toMatchInlineSnapshot(
+		await expect(async () => {
+			await githubUsernameToEmailsCli([]);
+		}).rejects.toMatchInlineSnapshot(
 			`[Error: Provide exactly one username, like \`npx github-username-to-emails joshuakgoldberg\`]`,
 		);
 	});
 
 	it("throws an error when two args are provided", async () => {
-		expect(
-			async () => await githubUsernameToEmailsCli(["abc", "def"]),
-		).rejects.toMatchInlineSnapshot(
+		await expect(async () => {
+			await githubUsernameToEmailsCli(["abc", "def"]);
+		}).rejects.toMatchInlineSnapshot(
 			`[Error: Provide exactly one username, like \`npx github-username-to-emails joshuakgoldberg\`]`,
 		);
 	});
@@ -55,7 +53,7 @@ describe("githubUsernameToEmailsCli", () => {
         `);
 	});
 
-	it("logs nothing when nothing is found", async () => {
+	it("logs results when results are found", async () => {
 		mockGetGitHubUsernameEmails.mockResolvedValue({
 			account: "abc@def.com",
 			events: {
