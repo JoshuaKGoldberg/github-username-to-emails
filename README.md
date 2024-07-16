@@ -18,6 +18,23 @@
 
 ## Usage
 
+You can run this as a standalone command, or by its Node.js API.
+
+### CLI
+
+```shell
+npx github-username-to-emails joshuakgoldberg
+```
+
+```plaintext
+Account email: github@joshuakgoldberg.com
+Event Email(s): 12
+ - git@joshuakgoldberg.com, with names: Josh Goldberg, Josh Goldberg ✨
+ - ...
+```
+
+### Node.js
+
 ```shell
 npm i github-username-to-emails
 ```

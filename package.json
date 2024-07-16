@@ -13,7 +13,9 @@
 	},
 	"type": "module",
 	"main": "./lib/index.js",
+	"bin": "./bin/index.js",
 	"files": [
+		"bin/",
 		"lib/",
 		"package.json",
 		"LICENSE.md",
