@@ -66,6 +66,14 @@ module.exports = {
 			rules: {
 				// These off-by-default rules work well for this repo and we like them on.
 				"deprecation/deprecation": "error",
+
+				// These on-by-default rules work well for this repo when configured.
+				"@typescript-eslint/restrict-template-expressions": [
+					"error",
+					{
+						allowNumber: true,
+					},
+				],
 			},
 		},
 		{
