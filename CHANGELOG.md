@@ -1,3 +1,9 @@
+# [0.3.0](https://github.com/JoshuaKGoldberg/github-username-to-emails/compare/0.2.0...0.3.0) (2024-07-17)
+
+### Features
+
+- add CLI ([#324](https://github.com/JoshuaKGoldberg/github-username-to-emails/issues/324)) ([1ab72c3](https://github.com/JoshuaKGoldberg/github-username-to-emails/commit/1ab72c39f26972ad75f3a6fffeb92b24cd2ccbdb)), closes [#2](https://github.com/JoshuaKGoldberg/github-username-to-emails/issues/2)
+
 # [0.2.0](https://github.com/JoshuaKGoldberg/github-username-to-emails/compare/0.1.0...0.2.0) (2024-07-16)
 
 ### Features
