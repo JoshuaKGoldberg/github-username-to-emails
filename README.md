@@ -64,7 +64,7 @@ Only publicly visible emails can be retrieved.
 
 ### Options
 
-`auth` is retrieved with [`get-github-auth-token`](https://github.com/JoshuaKGoldberg/get-github-auth-token), which defaults to `process.env.GH_TOKEN`, or failing that, [`gh auth token`](https://cli.github.com/manual/gh_auth_token).
+`auth` is retrieved with [`octokit-from-auth`](https://github.com/JoshuaKGoldberg/octokit-from-auth), which defaults to `process.env.GH_TOKEN`, or failing that, [`gh auth token`](https://cli.github.com/manual/gh_auth_token).
 If neither is available then an auth token must be provided as an option.
 
 | Option         | Type     | Description                        | Default                                      |

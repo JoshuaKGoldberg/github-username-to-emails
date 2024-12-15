@@ -39,8 +39,8 @@
 		"*": "prettier --ignore-unknown --write"
 	},
 	"dependencies": {
-		"get-github-auth-token": "^0.1.0",
-		"octokit": "^4.0.0"
+		"octokit": "^4.0.2",
+		"octokit-from-auth": "^0.2.0"
 	},
 	"devDependencies": {
 		"@release-it/conventional-changelog": "^9.0.0",
