@@ -40,7 +40,7 @@
 	},
 	"dependencies": {
 		"octokit": "^4.0.2",
-		"octokit-from-auth": "^0.2.0"
+		"octokit-from-auth": "^0.3.0"
 	},
 	"devDependencies": {
 		"@release-it/conventional-changelog": "^9.0.0",
