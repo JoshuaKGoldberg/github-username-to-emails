@@ -1,3 +1,11 @@
+# Changelog
+
+## [0.3.1](https://github.com/JoshuaKGoldberg/github-username-to-emails/compare/0.3.0...0.3.1) (2025-04-01)
+
+### Bug Fixes
+
+- bump to create-typescript-app@2 with transitions action ([#565](https://github.com/JoshuaKGoldberg/github-username-to-emails/issues/565)) ([5e889c9](https://github.com/JoshuaKGoldberg/github-username-to-emails/commit/5e889c972a76033a89518c98e0c9daabf8ab8923)), closes [#563](https://github.com/JoshuaKGoldberg/github-username-to-emails/issues/563)
+
 # [0.3.0](https://github.com/JoshuaKGoldberg/github-username-to-emails/compare/0.2.0...0.3.0) (2024-07-17)
 
 ### Features
