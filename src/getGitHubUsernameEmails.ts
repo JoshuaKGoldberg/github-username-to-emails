@@ -2,7 +2,7 @@ import { octokitFromAuth } from "octokit-from-auth";
 
 import { getAccountEmail } from "./getAccountEmail.js";
 import { getEventsEmails } from "./getEventsEmails.js";
-import { GitHubUsernameEmailsOptions, defaultOptions } from "./options.js";
+import { defaultOptions, GitHubUsernameEmailsOptions } from "./options.js";
 
 /**
  * For any number of emails, the names found under their commits.

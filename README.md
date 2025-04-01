@@ -1,19 +1,21 @@
 <h1 align="center">github-username-to-emails</h1>
 
-<p align="center">Fetches any public emails associated with a GitHub username. 📧</p>
+<p align="center">
+	Fetches any public emails associated with a GitHub username.
+	📧
+</p>
 
 <p align="center">
 	<!-- prettier-ignore-start -->
 	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-	<a href="#contributors" target="_blank"><img alt="All Contributors: 1 👪" src="https://img.shields.io/badge/all_contributors-1_👪-21bb42.svg" /></a>
+	<a href="#contributors" target="_blank"><img alt="👪 All Contributors: 1" src="https://img.shields.io/badge/%F0%9F%91%AA_all_contributors-1-21bb42.svg" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 	<!-- prettier-ignore-end -->
-	<a href="https://codecov.io/gh/JoshuaKGoldberg/github-username-to-emails" target="_blank"><img alt="Codecov Test Coverage" src="https://codecov.io/gh/JoshuaKGoldberg/github-username-to-emails/branch/main/graph/badge.svg"/></a>
-	<a href="https://github.com/JoshuaKGoldberg/github-username-to-emails/blob/main/.github/CODE_OF_CONDUCT.md" target="_blank"><img alt="Contributor Covenant" src="https://img.shields.io/badge/code_of_conduct-enforced-21bb42" /></a>
-	<a href="https://github.com/JoshuaKGoldberg/github-username-to-emails/blob/main/LICENSE.md" target="_blank"><img alt="License: MIT" src="https://img.shields.io/github/license/JoshuaKGoldberg/github-username-to-emails?color=21bb42"></a>
-	<img alt="Style: Prettier" src="https://img.shields.io/badge/style-prettier-21bb42.svg" />
-	<img alt="TypeScript: Strict" src="https://img.shields.io/badge/typescript-strict-21bb42.svg" />
-	<img alt="npm package version" src="https://img.shields.io/npm/v/github-username-to-emails?color=21bb42" />
+	<a href="https://github.com/JoshuaKGoldberg/github-username-to-emails/blob/main/.github/CODE_OF_CONDUCT.md" target="_blank"><img alt="🤝 Code of Conduct: Kept" src="https://img.shields.io/badge/%F0%9F%A4%9D_code_of_conduct-kept-21bb42" /></a>
+	<a href="https://codecov.io/gh/JoshuaKGoldberg/github-username-to-emails" target="_blank"><img alt="🧪 Coverage" src="https://img.shields.io/codecov/c/github/JoshuaKGoldberg/github-username-to-emails?label=%F0%9F%A7%AA%20coverage" /></a>
+	<a href="https://github.com/JoshuaKGoldberg/github-username-to-emails/blob/main/LICENSE.md" target="_blank"><img alt="📝 License: MIT" src="https://img.shields.io/badge/%F0%9F%93%9D_license-MIT-21bb42.svg" /></a>
+	<a href="http://npmjs.com/package/github-username-to-emails" target="_blank"><img alt="📦 npm version" src="https://img.shields.io/npm/v/github-username-to-emails?color=21bb42&label=%F0%9F%93%A6%20npm" /></a>
+	<img alt="💪 TypeScript: Strict" src="https://img.shields.io/badge/%F0%9F%92%AA_typescript-strict-21bb42.svg" />
 </p>
 
 ## Usage
@@ -93,6 +95,11 @@ This package only serves as a convenience to same time searching through that da
 
 To hide your email from public view, see [GitHub's _Setting your commit email address_ docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address).
 
+## Development
+
+See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
+Thanks! 📧
+
 ## Contributors
 
 <!-- spellchecker: disable -->
@@ -113,6 +120,4 @@ To hide your email from public view, see [GitHub's _Setting your commit email ad
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- spellchecker: enable -->
 
-<!-- You can remove this notice if you don't want it 🙂 no worries! -->
-
-> 💙 This package was templated with [`create-typescript-app`](https://github.com/JoshuaKGoldberg/create-typescript-app).
+> 💝 This package was templated with [`create-typescript-app`](https://github.com/JoshuaKGoldberg/create-typescript-app) using the [Bingo engine](https://create.bingo).

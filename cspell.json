@@ -1,6 +1,7 @@
 {
-	"dictionaries": ["typescript"],
+	"dictionaries": ["npm", "node", "typescript"],
 	"ignorePaths": [
+		".all-contributorsrc",
 		".github",
 		"CHANGELOG.md",
 		"coverage",
@@ -14,9 +15,9 @@
 		"commitlint",
 		"contributorsrc",
 		"conventionalcommits",
+		"joshuakgoldberg",
 		"knip",
 		"lcov",
-		"joshuakgoldberg",
 		"markdownlintignore",
 		"npmpackagejsonlintrc",
 		"outro",
