@@ -7,12 +7,12 @@ export interface EventCommit {
 	author: CommitAuthor;
 }
 
-export interface PayloadWithCommits {
-	commits: EventCommit[];
-}
-
 export interface EventWithCommits {
 	payload: PayloadWithCommits;
+}
+
+export interface PayloadWithCommits {
+	commits: EventCommit[];
 }
 
 export function isEventWithCommits(event: {

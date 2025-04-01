@@ -1,2 +1,2 @@
-export * from "./options.js";
 export * from "./getGitHubUsernameEmails.js";
+export * from "./options.js";
