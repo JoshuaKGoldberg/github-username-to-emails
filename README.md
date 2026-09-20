@@ -30,7 +30,7 @@ npx github-username-to-emails joshuakgoldberg
 
 ```plaintext
 Account email: github@joshuakgoldberg.com
-Event Email(s): 12
+Commit Email(s): 12
  - git@joshuakgoldberg.com, with names: Josh Goldberg, Josh Goldberg ✨
  - ...
 ```
@@ -57,9 +57,9 @@ await getGitHubUsernameEmails({ username: "joshuakgoldberg" });
 Calling `getGitHubUsernameEmails` will try to find the user's email from two public data points:
 
 - `account`: [`/users/${username}`](https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28#get-a-user): public account information
-- `events`: [`/users/{username}/events`](https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-public-events-for-a-user): commits pushed by the user
+- `events`: [`/search/commits?q=author:{username}`](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28#search-commits): commits GitHub attributes to the user
   - This is stored as an object containing, under each email, the commit names associated with that email
-  - Note that these may be commits originally authored by other users, _not_ the user you're looking for
+  - Only commits on repositories' default branches are searchable, and GitHub provides at most 1,000 search results
 
 Note that `account` might be `undefined` and `events` might be `{}`.
 Only publicly visible emails can be retrieved.
@@ -72,7 +72,7 @@ If neither is available then an auth token must be provided as an option.
 | Option         | Type     | Description                        | Default                                      |
 | -------------- | -------- | ---------------------------------- | -------------------------------------------- |
 | `auth`         | `string` | Auth token for Octokit REST calls. | `process.env.GH_TOKEN` or `$(gh auth token)` |
-| `historyLimit` | `number` | How many public events to look at. | `500`                                        |
+| `historyLimit` | `number` | How many commits to look at.       | `1000`                                       |
 | `username`     | `string` | GitHub user to check emails of.    |                                              |
 
 ```ts

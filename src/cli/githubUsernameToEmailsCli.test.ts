@@ -47,7 +47,7 @@ describe("githubUsernameToEmailsCli", () => {
 			    "Account email: None found...",
 			  ],
 			  [
-			    "Event Email(s): None found...",
+			    "Commit Email(s): None found...",
 			  ],
 			]
 		`);
@@ -70,7 +70,7 @@ describe("githubUsernameToEmailsCli", () => {
 			    "Account email: abc@def.com",
 			  ],
 			  [
-			    "Event Email(s): 2",
+			    "Commit Email(s): 2",
 			  ],
 			  [
 			    " - event-one, with names: ghi1, jkl1",

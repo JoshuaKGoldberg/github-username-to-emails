@@ -1,7 +1,7 @@
 import { octokitFromAuth } from "octokit-from-auth";
 
 import { getAccountEmail } from "./getAccountEmail.js";
-import { getEventsEmails } from "./getEventsEmails.js";
+import { getCommitsEmails } from "./getCommitsEmails.js";
 import { defaultOptions, GitHubUsernameEmailsOptions } from "./options.js";
 
 /**
@@ -24,6 +24,6 @@ export async function getGitHubUsernameEmails({
 
 	return {
 		account: await getAccountEmail(octokit, options),
-		events: await getEventsEmails(octokit, options),
+		events: await getCommitsEmails(octokit, options),
 	};
 }

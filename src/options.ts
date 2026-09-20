@@ -9,5 +9,5 @@ export interface GitHubUsernameEmailsOptions {
 }
 
 export const defaultOptions = {
-	historyLimit: 500,
+	historyLimit: 1000,
 };
