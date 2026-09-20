@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.2](https://github.com/JoshuaKGoldberg/github-username-to-emails/compare/0.3.1...0.3.2) (2026-09-20)
+
+### Bug Fixes
+
+- search commits instead of paginating events for emails ([#935](https://github.com/JoshuaKGoldberg/github-username-to-emails/issues/935)) ([13ccc89](https://github.com/JoshuaKGoldberg/github-username-to-emails/commit/13ccc89ce58876dc0d85bf65a22f2ec3c2c5d51c)), closes [#3](https://github.com/JoshuaKGoldberg/github-username-to-emails/issues/3)
+
 ## [0.3.1](https://github.com/JoshuaKGoldberg/github-username-to-emails/compare/0.3.0...0.3.1) (2025-04-01)
 
 ### Bug Fixes
