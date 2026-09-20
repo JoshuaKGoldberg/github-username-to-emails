@@ -72,7 +72,7 @@ If neither is available then an auth token must be provided as an option.
 | Option         | Type     | Description                        | Default                                      |
 | -------------- | -------- | ---------------------------------- | -------------------------------------------- |
 | `auth`         | `string` | Auth token for Octokit REST calls. | `process.env.GH_TOKEN` or `$(gh auth token)` |
-| `historyLimit` | `number` | How many commits to look at.       | `500`                                        |
+| `historyLimit` | `number` | How many commits to look at.       | `1000`                                       |
 | `username`     | `string` | GitHub user to check emails of.    |                                              |
 
 ```ts
