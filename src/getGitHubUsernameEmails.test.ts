@@ -13,8 +13,10 @@ vi.mock("./getAccountEmail.js", () => ({
 	getAccountEmail: vi.fn().mockResolvedValue("account-email@test.com"),
 }));
 
-vi.mock("./getEventsEmails.js", () => ({
-	getEventsEmails: vi.fn().mockResolvedValue({ "events-email": ["Name Test"] }),
+vi.mock("./getCommitsEmails.js", () => ({
+	getCommitsEmails: vi
+		.fn()
+		.mockResolvedValue({ "commits-email": ["Name Test"] }),
 }));
 
 const username = "abc123";
@@ -27,7 +29,7 @@ describe("getGitHubUsernameEmails", () => {
 			{
 			  "account": "account-email@test.com",
 			  "events": {
-			    "events-email": [
+			    "commits-email": [
 			      "Name Test",
 			    ],
 			  },
