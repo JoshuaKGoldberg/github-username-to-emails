@@ -37,7 +37,7 @@
 		"*": "prettier --ignore-unknown --write"
 	},
 	"dependencies": {
-		"octokit": "^4.0.2",
+		"octokit": "^5.0.0",
 		"octokit-from-auth": "^0.3.0"
 	},
 	"devDependencies": {
