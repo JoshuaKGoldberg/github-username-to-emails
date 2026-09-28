@@ -69,6 +69,9 @@ Only publicly visible emails can be retrieved.
 `auth` is retrieved with [`octokit-from-auth`](https://github.com/JoshuaKGoldberg/octokit-from-auth), which defaults to `process.env.GH_TOKEN`, or failing that, [`gh auth token`](https://cli.github.com/manual/gh_auth_token).
 If neither is available then an auth token must be provided as an option.
 
+The token doesn't need any [scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps) or permissions, as it's only used to read public data.
+A [classic personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) with no scopes selected or a [fine-grained personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) with public repository read-only access is enough.
+
 | Option         | Type     | Description                        | Default                                      |
 | -------------- | -------- | ---------------------------------- | -------------------------------------------- |
 | `auth`         | `string` | Auth token for Octokit REST calls. | `process.env.GH_TOKEN` or `$(gh auth token)` |
