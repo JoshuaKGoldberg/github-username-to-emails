@@ -42,7 +42,7 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           cache: pnpm
-          node-version: "18"
+          node-version: "22"
       - run: pnpm install --prod --engine-strict --ignore-scripts
 
   test:
