@@ -1,10 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { githubUsernameToEmailsCli } from "./githubUsernameToEmailsCli.js";
+import { githubUsernameToEmailsCli } from "./githubUsernameToEmailsCli.ts";
 
 const mockGetGitHubUsernameEmails = vi.fn();
 
-vi.mock("../getGitHubUsernameEmails.js", () => ({
+vi.mock("../getGitHubUsernameEmails.ts", () => ({
 	get getGitHubUsernameEmails() {
 		return mockGetGitHubUsernameEmails;
 	},
@@ -12,23 +12,21 @@ vi.mock("../getGitHubUsernameEmails.js", () => ({
 
 const mockLog = vi.fn();
 
-describe("githubUsernameToEmailsCli", () => {
+describe(githubUsernameToEmailsCli, () => {
 	beforeEach(() => {
 		console.log = mockLog;
 	});
 
 	it("throws an error when zero args are provided", async () => {
-		await expect(async () => {
-			await githubUsernameToEmailsCli([]);
-		}).rejects.toMatchInlineSnapshot(
+		await expect(githubUsernameToEmailsCli([])).rejects.toMatchInlineSnapshot(
 			`[Error: Provide exactly one username, like \`npx github-username-to-emails joshuakgoldberg\`]`,
 		);
 	});
 
 	it("throws an error when two args are provided", async () => {
-		await expect(async () => {
-			await githubUsernameToEmailsCli(["abc", "def"]);
-		}).rejects.toMatchInlineSnapshot(
+		await expect(
+			githubUsernameToEmailsCli(["abc", "def"]),
+		).rejects.toMatchInlineSnapshot(
 			`[Error: Provide exactly one username, like \`npx github-username-to-emails joshuakgoldberg\`]`,
 		);
 	});

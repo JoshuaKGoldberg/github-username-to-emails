@@ -1,6 +1,6 @@
 import { Octokit } from "octokit";
 
-import { FilledOutOptions } from "./options.js";
+import { FilledOutOptions } from "./options.ts";
 
 export async function getAccountEmail(
 	octokit: Octokit,

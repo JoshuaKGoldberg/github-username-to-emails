@@ -26,6 +26,5 @@
   ],
   "projectName": "github-username-to-emails",
   "projectOwner": "JoshuaKGoldberg",
-  "repoType": "github",
-  "commitConvention": "angular"
+  "repoType": "github"
 }
