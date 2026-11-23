@@ -18,7 +18,7 @@ jobs:
           - name: Lint
             run: pnpm lint
           - name: Lint GitHub Actions
-            uses: zizmorcore/zizmor-action@v0.6.4
+            uses: zizmorcore/zizmor-action@v0.8.1
             with:
               advanced-security: "false"
               annotations: "true"
@@ -39,7 +39,7 @@ jobs:
         with:
           persist-credentials: false
       - uses: ./.github/actions/prepare
-      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           cache: pnpm
           node-version: "22"

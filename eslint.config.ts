@@ -15,7 +15,7 @@ import tseslint from "typescript-eslint";
 
 export default defineConfig(
 	globalIgnores(
-		["**/*.snap", "coverage", "dist", "lib", "node_modules", "pnpm-lock.yaml"],
+		["**/*.snap", "coverage", "dist", "node_modules", "pnpm-lock.yaml"],
 		"Global Ignores",
 	),
 	{ linterOptions: { reportUnusedDisableDirectives: "error" } },
@@ -69,11 +69,6 @@ export default defineConfig(
 			// https://github.com/eslint/markdown/issues/294
 			"markdown/no-missing-label-refs": "off",
 		},
-	},
-	{
-		extends: [tseslint.configs.disableTypeChecked],
-		files: ["**/*.md/*.ts"],
-		rules: { "n/no-missing-import": "off" },
 	},
 	{
 		extends: [vitest.configs.recommended],
