@@ -147,7 +147,7 @@ describe(getCommitsEmails, () => {
 		const name = "Abc 123";
 		const { octokit } = createMockOctokit([
 			Array.from({ length: 1000 }, (_, i) =>
-				commit(`email-${String(i)}@test.com`, name),
+				commit(`email-${i}@test.com`, name),
 			),
 			[commit("email-1000@test.com", name)],
 		]);
