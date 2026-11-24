@@ -2,28 +2,29 @@
 	"dictionaries": ["npm", "node", "typescript"],
 	"ignorePaths": [
 		".all-contributorsrc",
-		".github",
+		"/_tmp_*",
 		"CHANGELOG.md",
 		"coverage",
-		"lib",
+		"dist",
 		"node_modules",
 		"pnpm-lock.yaml"
 	],
 	"words": [
 		"Codecov",
-		"codespace",
-		"commitlint",
+		"JoshuaKGoldberg",
+		"MatteoGabriele",
+		"agentscan",
+		"apexskier",
 		"contributorsrc",
 		"conventionalcommits",
-		"joshuakgoldberg",
 		"knip",
 		"lcov",
-		"markdownlintignore",
-		"npmpackagejsonlintrc",
-		"outro",
+		"mshick",
+		"octoguide",
 		"packagejson",
-		"quickstart",
-		"tsup",
-		"wontfix"
+		"peakoss",
+		"stefanzweifel",
+		"zizmor",
+		"zizmorcore"
 	]
 }

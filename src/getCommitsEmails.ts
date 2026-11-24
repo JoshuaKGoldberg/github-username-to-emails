@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
 
-import { EmailNamesStore } from "./EmailNamesStore.js";
-import { FilledOutOptions } from "./options.js";
+import { EmailNamesStore } from "./EmailNamesStore.ts";
+import { FilledOutOptions } from "./options.ts";
 
 // GitHub's search API only ever provides the first 1,000 results
 const maxSearchResults = 1000;

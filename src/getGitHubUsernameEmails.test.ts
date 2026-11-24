@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 
-import { getGitHubUsernameEmails } from "./getGitHubUsernameEmails.js";
+import { getGitHubUsernameEmails } from "./getGitHubUsernameEmails.ts";
 
 vi.mock("octokit-from-auth", () => ({
 	octokitFromAuth: () =>
@@ -9,11 +9,11 @@ vi.mock("octokit-from-auth", () => ({
 		}),
 }));
 
-vi.mock("./getAccountEmail.js", () => ({
+vi.mock("./getAccountEmail.ts", () => ({
 	getAccountEmail: vi.fn().mockResolvedValue("account-email@test.com"),
 }));
 
-vi.mock("./getCommitsEmails.js", () => ({
+vi.mock("./getCommitsEmails.ts", () => ({
 	getCommitsEmails: vi
 		.fn()
 		.mockResolvedValue({ "commits-email": ["Name Test"] }),
@@ -21,7 +21,7 @@ vi.mock("./getCommitsEmails.js", () => ({
 
 const username = "abc123";
 
-describe("getGitHubUsernameEmails", () => {
+describe(getGitHubUsernameEmails, () => {
 	it("returns account and events emails", async () => {
 		const actual = await getGitHubUsernameEmails({ username });
 

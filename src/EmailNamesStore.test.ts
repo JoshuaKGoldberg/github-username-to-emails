@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import { EmailNamesStore } from "./EmailNamesStore.js";
+import { EmailNamesStore } from "./EmailNamesStore.ts";
 
-describe("EmailNamesStore", () => {
+describe(EmailNamesStore, () => {
 	it("produces no entries when no emails were added", () => {
 		const store = new EmailNamesStore();
 

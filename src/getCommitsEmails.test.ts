@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
 import { describe, expect, it, vi } from "vitest";
 
-import { getCommitsEmails } from "./getCommitsEmails.js";
+import { getCommitsEmails } from "./getCommitsEmails.ts";
 
 interface MockCommit {
 	commit: {
@@ -47,7 +47,7 @@ const commit = (email?: string, name?: string): MockCommit => ({
 
 const options = { historyLimit: 9001, username: "abc123" };
 
-describe("getCommitsEmails", () => {
+describe(getCommitsEmails, () => {
 	it("returns no emails when the GitHub api returns no commits", async () => {
 		const { octokit } = createMockOctokit([[]]);
 

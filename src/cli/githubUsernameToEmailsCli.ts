@@ -1,4 +1,4 @@
-import { getGitHubUsernameEmails } from "../getGitHubUsernameEmails.js";
+import { getGitHubUsernameEmails } from "../getGitHubUsernameEmails.ts";
 
 export async function githubUsernameToEmailsCli(args: string[]) {
 	if (args.length !== 1) {

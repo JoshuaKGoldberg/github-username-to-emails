@@ -1,14 +1,14 @@
 import { Octokit } from "octokit";
 import { describe, expect, it, MockInstance, vi } from "vitest";
 
-import { getAccountEmail } from "./getAccountEmail.js";
+import { getAccountEmail } from "./getAccountEmail.ts";
 
 const createMockOctokit = (request: MockInstance) =>
 	({ request }) as unknown as Octokit;
 
 const options = { historyLimit: 9001, username: "abc123" };
 
-describe("getAccountEmail", () => {
+describe(getAccountEmail, () => {
 	it("returns no email when the GitHub api returns no email", async () => {
 		const request = vi.fn().mockResolvedValue({ data: {} });
 
